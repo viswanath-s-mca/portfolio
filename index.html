@@ -3,35 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <title>Viswanath S | Portfolio</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#0ea5e9',
-            dark: '#020617',
-          },
-          boxShadow: {
-            glow: '0 0 25px rgba(14,165,233,0.4)',
-          }
-        }
-      }
-    }
-  </script>
-
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-dark text-white">
+<body>
+  <!-- Ambient Background Animations -->
+  <div class="bg-animations">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+  
+  <!-- Custom Mouse Cursor Glow -->
+  <div class="cursor-glow" id="cursor-glow"></div>
 
-<nav class="fixed w-full z-50 bg-black/70 backdrop-blur border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold text-primary">Viswanath S</h1>
-    <ul class="hidden md:flex space-x-10 text-sm">
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="logo">V.S</a>
+    <button class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#home" class="nav-link">Home</a></li>
       <li><a href="#about" class="nav-link">About</a></li>
       <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -39,77 +36,233 @@
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
-  </div>
-</nav>
+  </nav>
 
-<section id="home" class="min-h-screen flex items-center justify-center text-center px-6">
-  <div class="mt-20 max-w-3xl reveal">
-    <h1 class="text-5xl md:text-6xl font-bold mb-6">
-      Hi, I'm <span class="text-primary">Viswanath S</span>
+  <!-- Hero Section -->
+  <section id="home" class="hero reveal">
+    <div class="hero-badge">Welcome to my universe</div>
+    <h1 class="hero-title">
+      Hi, I'm <br> <span class="gradient-text">Viswanath S</span>
     </h1>
-    <p id="typing" class="text-xl text-gray-300 mb-8"></p>
-    <div class="flex justify-center gap-6">
-      <a href="#projects" class="btn-primary">View Projects</a>
-      <a href="#" class="btn-outline">Download Resume</a>
+    <div class="hero-typing">
+      <span id="typing"></span><span class="cursor"></span>
     </div>
-  </div>
-</section>
+    <div class="btn-group">
+      <a href="#projects" class="btn btn-primary">
+        View Projects <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+      </a>
+      <a href="#" class="btn btn-outline">
+        <i class="fa-solid fa-download" style="margin-right: 8px;"></i> Resume
+      </a>
+    </div>
+  </section>
 
-<section id="about" class="section bg-black reveal">
-  <h2 class="section-title">About Me</h2>
-  <p class="section-text">
-    I am a dedicated software developer with strong fundamentals in frontend and
-    backend development. I focus on building scalable and user-friendly applications.
-  </p>
-</section>
+  <!-- About Section -->
+  <section id="about" class="reveal">
+    <div class="section-header">
+      <h2 class="section-title gradient-text">About Me</h2>
+      <p class="section-subtitle">Crafting digital experiences with precision and passion.</p>
+    </div>
+    
+    <div class="about-grid glass-card">
+      <div>
+        <p class="about-text">
+          I am a dedicated software developer with strong fundamentals in frontend and backend development. 
+          I focus on building scalable, performant, and deeply user-friendly applications that leave a lasting impression.
+        </p>
+        <p class="about-text">
+          My journey involves exploring modern frameworks, mastering Java architectures, and refining my eye for pixel-perfect UI. 
+          I believe code should not just work—it should be beautiful inside and out.
+        </p>
+      </div>
+      <div class="about-stats reveal-stagger">
+        <div class="stat-item">
+          <div class="stat-num">2+</div>
+          <div style="color: var(--text-muted); font-size: 0.9rem;">Years Coding</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">10+</div>
+          <div style="color: var(--text-muted); font-size: 0.9rem;">Projects Built</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">4+</div>
+          <div style="color: var(--text-muted); font-size: 0.9rem;">Tech Stacks</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100%</div>
+          <div style="color: var(--text-muted); font-size: 0.9rem;">Commitment</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="skills" class="section reveal">
-  <h2 class="section-title">Technical Skills</h2>
+  <!-- Skills Section -->
+  <section id="skills" class="reveal">
+    <div class="section-header">
+      <h2 class="section-title gradient-text">Technical Arsenal</h2>
+      <p class="section-subtitle">The tools I use to bring ideas to life.</p>
+    </div>
 
-  <div class="skills-container">
-    <div class="skill-bar"><span>HTML / CSS</span><div style="width:90%"></div></div>
-    <div class="skill-bar"><span>JavaScript</span><div style="width:85%"></div></div>
-    <div class="skill-bar"><span>React JS</span><div style="width:80%"></div></div>
-    <div class="skill-bar"><span>Tailwind CSS</span><div style="width:80%"></div></div>
-    <div class="skill-bar"><span>Java</span><div style="width:75%"></div></div>
-    <div class="skill-bar"><span>Spring Boot</span><div style="width:70%"></div></div>
-  </div>
-</section>
+    <div class="skills-grid reveal-stagger">
+      <!-- Frontend Card -->
+      <div class="glass-card skill-category">
+        <h3><i class="fa-solid fa-layer-group" style="color: var(--primary);"></i> Frontend</h3>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-info"><span>HTML / CSS</span> <span>90%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>JavaScript</span> <span>85%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>React JS</span> <span>80%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>Tailwind CSS</span> <span>80%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80%"></div></div>
+          </div>
+        </div>
+      </div>
 
-<section id="experience" class="section bg-black reveal">
-  <h2 class="section-title">Experience</h2>
-  <div class="glass-card">
-    <h3 class="text-xl font-semibold text-primary">Java Back-end developer</h3>
-    <p class="text-gray-400 text-sm">2024-2025</p>
-    <p class="mt-3 text-gray-300">
-      I worked as a java backend developer and I mainly wored in Java Spring Boot 
-    </p>
-  </div>
-</section>
+      <!-- Backend Card -->
+      <div class="glass-card skill-category">
+        <h3><i class="fa-solid fa-server" style="color: var(--secondary);"></i> Backend</h3>
+        <div class="skill-list">
+          <div class="skill-item">
+            <div class="skill-info"><span>Java Core</span> <span>75%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="75%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>Spring Boot</span> <span>70%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="70%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>SQL/Database</span> <span>65%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="65%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info"><span>REST APIs</span> <span>80%</span></div>
+            <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="projects" class="section reveal">
-  <h2 class="section-title">Projects</h2>
+  <!-- Experience Section -->
+  <section id="experience" class="reveal">
+    <div class="section-header">
+      <h2 class="section-title gradient-text">Experience</h2>
+      <p class="section-subtitle">My professional journey so far.</p>
+    </div>
 
-  <div class="grid md:grid-cols-3 gap-8 mt-10">
-    <div class="glass-card">Inventory Management System</div>
-    <div class="glass-card">Green Loop App</div>
-    <div class="glass-card">Java Console Game</div>
-    <div class="glass-card">Mobile App</div>
-  </div>
-</section>
+    <div class="timeline glass-card">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2024 - 2025</span>
+          <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-main);">Java Back-end Developer</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            I worked as a Java backend developer primarily focused on Java Spring Boot architectures. 
+            Responsible for designing RESTful APIs, optimizing database queries, and ensuring high-performance server-side logic for enterprise applications.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="contact" class="section bg-black text-center reveal">
-  <h2 class="section-title">Let’s Connect</h2>
-  <p class="section-text">Open for opportunities & collaborations</p>
-  <a href="mailto:youremail@gmail.com" class="btn-primary mt-6 inline-block">
-    Contact Me
-  </a>
-</section>
+  <!-- Projects Section -->
+  <section id="projects" class="reveal">
+    <div class="section-header">
+      <h2 class="section-title gradient-text">Featured Projects</h2>
+      <p class="section-subtitle">Some of my recent work that I'm proud of.</p>
+    </div>
 
-<footer class="py-6 text-center text-gray-500 text-sm">
-  © 2026 Viswanath S. All Rights Reserved.
-</footer>
+    <div class="projects-grid reveal-stagger">
+      
+      <div class="glass-card project-card">
+        <div class="project-img"><i class="fa-solid fa-boxes-stacked"></i></div>
+        <div class="project-content">
+          <h3 class="project-title">Inventory Management System</h3>
+          <p class="project-desc">A robust backend system developed to track inventory levels, orders, sales, and deliveries in real-time.</p>
+          <div class="project-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+      </div>
 
-<script src="script.js"></script>
+      <div class="glass-card project-card">
+        <div class="project-img"><i class="fa-solid fa-leaf"></i></div>
+        <div class="project-content">
+          <h3 class="project-title">Green Loop App</h3>
+          <p class="project-desc">An environmentally focused application that promotes recycling and sustainability tracking for local communities.</p>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">Tailwind</span>
+            <span class="tag">Node.js</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card project-card">
+        <div class="project-img"><i class="fa-solid fa-gamepad"></i></div>
+        <div class="project-content">
+          <h3 class="project-title">Java Console Game</h3>
+          <p class="project-desc">A complex text-based role-playing game built purely in Java, featuring object-oriented design patterns and intricate logic.</p>
+          <div class="project-tags">
+            <span class="tag">Java Core</span>
+            <span class="tag">OOP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card project-card">
+        <div class="project-img"><i class="fa-solid fa-mobile-screen"></i></div>
+        <div class="project-content">
+          <h3 class="project-title">Mobile Utility App</h3>
+          <p class="project-desc">A versatile mobile application focused on daily productivity and task management with seamless synchronization.</p>
+          <div class="project-tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">Firebase</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="reveal">
+    <div class="glass-card contact-wrapper">
+      <div class="hero-badge" style="margin-bottom: 1rem;">What's Next?</div>
+      <h2 class="section-title gradient-text">Let’s Connect</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1rem;">
+        Currently open for new opportunities and collaborations. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+      </p>
+      
+      <a href="mailto:youremail@gmail.com" class="contact-email gradient-text">hello@viswanath.dev</a>
+      
+      <a href="mailto:youremail@gmail.com" class="btn btn-primary" style="margin-top: 1rem;">
+        Say Hello <i class="fa-regular fa-paper-plane" style="margin-left: 8px;"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Viswanath S. Designed & Built with passion.</p>
+    <div style="margin-top: 1rem; display: flex; justify-content: center; gap: 1rem;">
+      <a href="#" style="color: var(--text-subtle);"><i class="fa-brands fa-github fa-lg"></i></a>
+      <a href="#" style="color: var(--text-subtle);"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+      <a href="#" style="color: var(--text-subtle);"><i class="fa-brands fa-twitter fa-lg"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
