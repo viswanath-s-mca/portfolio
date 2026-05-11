@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0ea5e9',
+            dark: '#020617',
+          },
+          boxShadow: {
+            glow: '0 0 25px rgba(14,165,233,0.4)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-dark text-white">
+
+<nav class="fixed w-full z-50 bg-black/70 backdrop-blur border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-primary">Viswanath S</h1>
+    <ul class="hidden md:flex space-x-10 text-sm">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="home" class="min-h-screen flex items-center justify-center text-center px-6">
+  <div class="mt-20 max-w-3xl reveal">
+    <h1 class="text-5xl md:text-6xl font-bold mb-6">
+      Hi, I'm <span class="text-primary">Viswanath S</span>
+    </h1>
+    <p id="typing" class="text-xl text-gray-300 mb-8"></p>
+    <div class="flex justify-center gap-6">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#" class="btn-outline">Download Resume</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section bg-black reveal">
+  <h2 class="section-title">About Me</h2>
+  <p class="section-text">
+    I am a dedicated software developer with strong fundamentals in frontend and
+    backend development. I focus on building scalable and user-friendly applications.
+  </p>
+</section>
+
+<section id="skills" class="section reveal">
+  <h2 class="section-title">Technical Skills</h2>
+
+  <div class="skills-container">
+    <div class="skill-bar"><span>HTML / CSS</span><div style="width:90%"></div></div>
+    <div class="skill-bar"><span>JavaScript</span><div style="width:85%"></div></div>
+    <div class="skill-bar"><span>React JS</span><div style="width:80%"></div></div>
+    <div class="skill-bar"><span>Tailwind CSS</span><div style="width:80%"></div></div>
+    <div class="skill-bar"><span>Java</span><div style="width:75%"></div></div>
+    <div class="skill-bar"><span>Spring Boot</span><div style="width:70%"></div></div>
+  </div>
+</section>
+
+<section id="experience" class="section bg-black reveal">
+  <h2 class="section-title">Experience</h2>
+  <div class="glass-card">
+    <h3 class="text-xl font-semibold text-primary">Java Back-end developer</h3>
+    <p class="text-gray-400 text-sm">2024-2025</p>
+    <p class="mt-3 text-gray-300">
+      I worked as a java backend developer and I mainly wored in Java Spring Boot 
+    </p>
+  </div>
+</section>
+
+<section id="projects" class="section reveal">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="grid md:grid-cols-3 gap-8 mt-10">
+    <div class="glass-card">Inventory Management System</div>
+    <div class="glass-card">Green Loop App</div>
+    <div class="glass-card">Java Console Game</div>
+    <div class="glass-card">Mobile App</div>
+  </div>
+</section>
+
+<section id="contact" class="section bg-black text-center reveal">
+  <h2 class="section-title">Let’s Connect</h2>
+  <p class="section-text">Open for opportunities & collaborations</p>
+  <a href="mailto:youremail@gmail.com" class="btn-primary mt-6 inline-block">
+    Contact Me
+  </a>
+</section>
+
+<footer class="py-6 text-center text-gray-500 text-sm">
+  © 2026 Viswanath S. All Rights Reserved.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
